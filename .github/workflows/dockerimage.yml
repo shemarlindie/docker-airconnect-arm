@@ -11,4 +11,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build and deploy the Docker image to dockerhub
-      run: docker build . --file Dockerfile --tag shemarcl/airconnect-arm:latest && docker push shemarcl/airconnect-arm:latest 
+      run: docker login && docker build . --file Dockerfile --tag shemarcl/airconnect-arm:latest && docker push shemarcl/airconnect-arm:latest 
