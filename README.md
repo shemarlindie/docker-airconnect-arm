@@ -1,3 +1,5 @@
+# MODIFIED FOR ARM (Example: Raspberry Pi 4)
+
 # docker-airconnect
 AirConnect container for turning Chromecast into Airplay targets  
 On DockerHub: https://hub.docker.com/r/1activegeek/airconnect  
@@ -49,9 +51,9 @@ If you need to attempt to dig into troubleshooting and see the logs realtime in 
 
 Once inside the container, you can use standard config options to run the app as outlined by the creator. The app is located in the `/bin` directory. Both the UPNP and Cast versions of the file are being run in this container.
 
-`./aircast-x86-64 --h` - will provide you a list of commands that can be run via the app
+`./aircast-arm --h` - will provide you a list of commands that can be run via the app
 
-`./aircast-x86-64 -d all=debug` - will run the app and output a debug based log in an interactive mode
+`./aircast-arm -d all=debug` - will run the app and output a debug based log in an interactive mode
 
 If you perform any realtime testing, it is suggested to completely restart the container after testing to be sure there are no incompatibilities that arise with running it in daemon mode while also running it interactively. 
 
