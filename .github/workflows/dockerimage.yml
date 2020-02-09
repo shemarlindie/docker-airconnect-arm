@@ -1,0 +1,14 @@
+name: Docker Image CI
+
+on: [push]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build and deploy the Docker image to dockerhub
+      run: docker build . --file Dockerfile --tag airconnect:latest && docker push shemarcl/airconnect-arm:latest 
